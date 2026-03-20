@@ -1,0 +1,97 @@
+#question 1
+Suppose that you’re in a country where it’s customary to eat breakfast between 7:00 and 8:00, lunch between 12:00 and 13:00, and dinner between 18:00 and 19:00. Wouldn’t it be nice if you had a program that could tell you what to eat when?
+In meal.py, implement a program that prompts the user for a time and outputs whether it’s breakfast time, lunch time, or dinner time. If it’s not time for a meal, don’t output anything at all. Assume that the user’s input will be formatted in 24-hour time as #:## or ##:##. And assume that each meal’s time range is inclusive. For instance, whether it’s 7:00, 7:01, 7:59, or 8:00, or anytime in between, it’s time for breakfast.
+Structure your program per the below, wherein convert is a function (that can be called by main) that converts time, a str in 24-hour format, to the corresponding number of hours as a float. For instance, given a time like "7:30" (i.e., 7 hours and 30 minutes), convert should return 7.5 (i.e., 7.5 hours).
+#CODE:
+print("what to eat and when to eat timing schedule")
+def main():
+    time= input("what time is it?")
+    result= convert(time)
+    if 7.0 <= result <= 8.0:
+        print("breakfast time")
+    elif 12.0 <= result <= 13.0:
+        print("lunch time")
+    elif 18.0 <= result <= 19.0:
+        print("dinner time")       
+def convert(time):
+    hours, minutes = time.split(":")
+    return int(hours) + int(minutes)/60
+if __name__ == "__main__":
+    main()
+
+#QUESTION 2
+implement a program that prompts the user for the answer to the Great Question of Life, the Universe and Everything, outputting Yes if the user inputs 42 or (case-insensitively) forty-two or forty two. Otherwise output No
+#CODE:
+print("Let's solve some questions regarding Universe and Great Question of LIFE")
+user = input("Enter your answer=" ) .lower()
+if user == "42" :
+    print(" Yes")
+elif user == "forty two":
+    print(" Yes ")
+elif user == "forty-two":
+    print(" Yes")
+else:
+    print("No")
+
+#QUESTION 3
+In season 7, episode 24 of Seinfeld, Kramer visits a bank that promises to give $100 to anyone who isn’t greeted with a “hello.” Kramer is instead greeted with a “hey,” which he insists isn’t a “hello,” and so he asks for $100. The bank’s manager proposes a compromise: “You got a greeting that starts with an ‘h,’ how does $20 sound?” Kramer accepts.
+In a file called bank.py, implement a program that prompts the user for a greeting. If the greeting starts with “hello”, output $0. If the greeting starts with an “h” (but not “hello”), output $20. Otherwise, output $100. Ignore any leading whitespace in the user’s greeting, and treat the user’s greeting case-insensitively.
+#CODE:
+print(" Earn $ by greeting in your way")
+greeting= input("Greeting= ") .strip() .lower()
+if greeting.startswith ("hello"):
+    print("$0")
+elif greeting.startswith ("h"):
+    print("$20")
+else:
+    print("$100") 
+
+#QUESTION 4
+In a file called extensions.py, implement a program that prompts the user for the name of a file and then outputs that file’s media type if the file’s name ends, case-insensitively, in any of these suffixes:
+.gif   .jpg    .jpeg    .png    .pdf   .txt  .zip
+If the file’s name ends with some other suffix or has no suffix at all, output application/octet-stream instead, which is a common default.
+#CODE:
+print("File extension ")
+filename= input("enter your filename= ") .lower() .strip()
+if filename.endswith ((".jpg", ".jpeg")):
+    print("image/jpeg")
+elif filename.endswith ((".gif")):
+    print("image/gif")
+elif filename.endswith ((".png")):
+    print("image/png")
+elif filename.endswith ((".pdf")):
+    print("application/pdf")
+elif filename.endswith ((".txt")):
+    print("text/plain")
+elif filename.endswith ((".zip")):
+    print("application/zip")
+else:
+    print("application/octet-stream")
+
+#QUESTION 5
+implement a program that prompts the user for an arithmetic expression and then calculates and outputs the result as a floating-point value formatted to one decimal place. Assume that the user’s input will be formatted as x y z, with one space between x and y and one space between y and z, wherein:
+x is an integer
+y is +, -, *, or /
+z is an integer
+For instance, if the user inputs 1 + 1, your program should output 2.0. Assume that, if y is /, then z will not be 0.
+Note that, just as python itself is an interpreter for Python, so will your interpreter.py be an interpreter for math!
+#CODE:
+print("let’s write a program that enables users to do math, even without knowing Python.")
+
+Expression = input("enter expression= ")
+x, y, z = Expression.split(" ")
+x = int(x) 
+z = int(z)
+
+if y == "+":
+    result = x + z
+elif y == "-":
+    result = x-z
+elif y == "*":
+    result = x*z
+elif y == "/":
+    result = x/z
+
+print(f"{result:.1f}")
+
+
