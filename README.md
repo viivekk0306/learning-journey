@@ -8,3 +8,11 @@
 - Completed CS50P Week 0
 - Learned functions, variables, user input, strings
 - Solved Week 0 problem set
+
+- ## Day 3
+- Completed CS50P Week 1 conditionals section
+- Solved 5 problem sets using conditionals
+- Learned and used: .lower(), .strip(), .startswith(), 
+  .endswith(), .split(), float conversion, functions
+- Built: file type detector, math interpreter, 
+  meal time checker, greeting evaluator
