@@ -16,3 +16,8 @@
   .endswith(), .split(), float conversion, functions
 - Built: file type detector, math interpreter, 
   meal time checker, greeting evaluator
+
+  ## Day 4
+- Attended Generative AI Mastermind Day 1
+- Learned prompt engineering, AI bots, MCP basics
+- Tools explored: Gemini Gems, Replit, Layzr AI, Apify, Goose AI
