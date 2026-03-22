@@ -21,3 +21,6 @@
 - Attended Generative AI Mastermind Day 1
 - Learned prompt engineering, AI bots, MCP basics
 - Tools explored: Gemini Gems, Replit, Layzr AI, Apify, Goose AI
+
+## Certifications 🏆
+- Generative AI Mastermind — Outskill (March 2026)
